@@ -1,0 +1,2 @@
+-- 12. Titles of all of movies in which both Jennifer Lawrence and Bradley Cooper starred
+SELECT movies.title FROM movies JOIN stars AS jennifer ON movies.id = jennifer.movie_id JOIN people AS jennifer_person ON jennifer.person_id = jennifer_person.id JOIN stars AS bradley ON movies.id = bradley.movie_id JOIN people AS bradley_person ON bradley.person_id = bradley_person.id WHERE jennifer_person.name = 'Jennifer Lawrence' AND bradley_person.name = 'Bradley Cooper';
